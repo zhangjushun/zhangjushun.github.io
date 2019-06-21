@@ -486,7 +486,7 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 15px;
   color: #4d4d4c;
   background: #f7f7f7;
   line-height: 1.6;
@@ -499,9 +499,9 @@ code {
   padding: 2px 4px;
   word-wrap: break-word;
   color: #555;
-  background: #eee;
-  border-radius: 3px;
-  font-size: 13px;
+  background: #ccc;
+  border-radius: 4px;
+  font-size: 15px;
 }
 pre {
   padding: 10px;
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0f247f;
+  background: #ecff1b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1944,7 +1944,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: black-light;
 }
 .footer img {
   border: none;
@@ -2659,4 +2659,10 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+body {
+  background-image: url("/images/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat center top;
+  background-position: center top;
 }
