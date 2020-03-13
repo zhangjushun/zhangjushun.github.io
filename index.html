@@ -173,8 +173,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.马上就要毕业了，我并不知道自己5年后会怎样，但我知道现在的能力怎样，我现在的主要目标就是找到一份我喜爱的工作做下去，每天都能在作中提升点自己的能力，不断完善自己，这五年或多或少会有些疲倦和苦，难题有时可能会比学校里做的题还要复杂，但是一帆风顺的人生又有啥乐趣，解决困难才让我更加有成就感幸福感，我会尽我所能的做好自己的工作，没有过不去的坎儿。<br>2.这5年没啥迷茫的，和学习是一样的。学习有成绩，工作同样有好成绩，学习有奖学金，工作同样奖金，学习有同学老师帮助，工作有同事主管助，只是换了一个环境而已，唯一多出的好处是，我们终于可以帮父母分担一下生活的压力了。我的责任变重了，但是这并不能压垮我的，这只能激励我去更好的奋斗，这么年轻的我，可能性还是蛮多的。<br>3.青春绝对不是用来浪费的，就是需要在最好的时光做最好的自己。</p>
-
+        <p>1.马上就要毕业了，我并不知道自己5年后会怎样，但我知道现在的能力怎样，我现在的主要目标就是找到一份我喜爱的工作做下去，每天都能在作中提升点自己的能力，不断完善自己，这五年或多或少会有些疲倦和苦，难题有时可能会比学校里做的题还要复杂，但是一帆风顺的人生又有啥乐趣，解决困难才让我更加有成就感幸福感，我会尽我所能的做好自己的工作，没有过不去的坎儿。</p>
+        
       
 
       
@@ -262,43 +262,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">show mac address-table</span><br><span class="line">clear mac address-table</span><br><span class="line">mac address-table static 机器mac 接口 vlan vlan号</span><br></pre></td></tr></table></figure>
 
 <p>vlan<br>vlan间隔离<br>vlan内可通信<br>一条路径多个vlan   用trunk</p>
-<p>dhcp(当局域网中客户机很多，手工配置IP地址有很大工作量,引入的)</p>
-<p>设置地址池<br>关联网段<br>网关IP<br>排除其他网段</p>
-<p>路由汇总<br>方便管理，路由表数目减少</p>
-<h3 id="2-数据库小知识"><a href="#2-数据库小知识" class="headerlink" title="2.数据库小知识"></a>2.数据库小知识</h3><p><strong>创建表</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table instructor2(</span><br><span class="line">    id char(5) not null,</span><br><span class="line">    name varchar(20) not null,</span><br><span class="line">    dept_name varchar(20) not null,</span><br><span class="line">    salary numeric(8,2),</span><br><span class="line">    primary key(id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<p><strong>插入</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into instructor2 values(00001,<span class="string">'ai'</span>,<span class="string">'math'</span>,2500.37);</span><br></pre></td></tr></table></figure>
-
-<p>删除元组</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from instructor <span class="built_in">where</span> dept_name=<span class="string">'math'</span>;</span><br></pre></td></tr></table></figure>
-
-<p>删除关系</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table 关系名</span><br></pre></td></tr></table></figure>
-
-<p>新增属性</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table instructor2 add firstname varchar(20),lastname varchar(20);</span><br></pre></td></tr></table></figure>
-
-<p><strong>查询</strong></p>
-<p><strong>选啥，在哪选，条件是什么</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id,name,salary from instructor2 <span class="built_in">where</span> salary&gt;4000;</span><br></pre></td></tr></table></figure>
-
-<p>选啥，在哪选，条件是什么</p>
-<p><strong>去重操作（distinct）</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct 属性名 from 关系名 <span class="built_in">where</span> 条件</span><br></pre></td></tr></table></figure>
-
-<p><strong>字符串运算（like）</strong><br>% 
- 匹配0或多个字符<br>_   
- 匹配任意1个字符（必须有一个）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from instructor2 <span class="built_in">where</span> salary like <span class="string">'%0_.%'</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>显示次序（order by）</strong><br>默认升序：asc<br>降序：desc</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from instructor2 order by salary desc;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from instructor2 <span class="built_in">where</span> salary between 3000 and 6000;</span><br></pre></td></tr></table></figure>
-
-
+        
       
 
       
@@ -383,43 +347,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>2020/3/4<br><strong>Struts，web层（ValueStack值栈，拦截器 ）<br>hibernate，dao层<br>spring ，sevice层，重要</strong><br>spring承上启下<br>1.基础（<strong>Ioc控制反转，DI依赖注入</strong>）,整合junit，整合web<br>2.AOP切面编程，jdbcTemplate<br>3.事物管理，ssh整合</p>
-<p>依赖资源少，销毁的资源少<br>分层：一站式<br>web层structs，<strong>spring-MVC</strong></p>
-<p>service层 spring</p>
-<p>dao层hibernate ，mybatis，jdbcTemplate—&gt;spring-data</p>
-<p><strong>spring核心</strong><br>Ioc控制反转   AOP切面编程<br><strong>spring优点</strong></p>
-<ul>
-<li>方便解耦，简单开发（高内聚低耦合）—-spring是工厂 ，用于生产bean</li>
-<li>AOP编程支持</li>
-<li>声明事物的支持</li>
-<li>方便集成各种框架</li>
-<li>降低 java API的使用难度</li>
-</ul>
-<p> <strong>一.核心容器</strong></p>
-<ol>
-<li>管理bean beans</li>
-<li>核心     core</li>
-<li>上下文（配置文件） context</li>
-<li>SPEL表达式    expression</li>
-</ol>
-<p><strong>二.</strong></p>
-<ol>
-<li>切面编程<ol start="2">
-<li>AOP框架</li>
-</ol>
-</li>
-</ol>
-<p><strong>三.</strong></p>
-<ol>
-<li>JDBCTemplate数据开发</li>
-<li>整合hibernate</li>
-</ol>
-<p><strong>四</strong></p>
-<ol>
-<li>web开发</li>
-<li>整合Struts</li>
-<li>整合Junit</li>
-</ol>
-
+        
       
 
       
@@ -511,33 +439,7 @@
 
 </li>
 </ol>
-<p>复制代码<br>categories文件夹下会有index.md这个文件，打开后默认内容是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date:</span><br></pre></td></tr></table></figure>
-
-<p>复制代码<br>添加type: “categories”到内容中，添加后是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: </span><br><span class="line"><span class="built_in">type</span>: categories</span><br></pre></td></tr></table></figure>
-
-<p>复制代码<br>保存并关闭文件。</p>
-<p>给文章添加“categories”属性</p>
-<p>打开需要添加分类的文章，为其添加categories属性。下方的categories:Hexo表示这篇文章添加到到“Hexo”这个分类。注意：一篇文章只会添加到一个分类中，如果是多个默认放到第一个分类中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo 添加分类及标签</span><br><span class="line">date: </span><br><span class="line">categories: Hexo</span><br></pre></td></tr></table></figure>
-
-<p>复制代码<br>至此，成功给文章添加分类，点击首页的“分类”可以看到该分类下的所有文章。当然，只有添加了categories: xxx的文章才会被收录到首页的“分类”中。</p>
-<ol start="2">
-<li>创建“标签”选项<br>生成“标签”页并添加tpye属性</li>
-</ol>
-<p>$ hexo new page tags<br>复制代码<br>在tags文件夹下，找到index.md这个文件，打开后默认内容是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date:</span><br></pre></td></tr></table></figure>
-
-<p>复制代码<br>添加type: “tags”到内容中，添加后是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: </span><br><span class="line"><span class="built_in">type</span>: tags</span><br></pre></td></tr></table></figure>
-
-<p>复制代码<br>保存并关闭文件。</p>
-<p>给文章添加“tags”属性,打开需要添加标签的文章，为其添加tags属性。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo 添加分类及标签</span><br><span class="line">date: </span><br><span class="line">categories: </span><br><span class="line">           - Hexo</span><br><span class="line">tags:</span><br><span class="line">           - 博客</span><br></pre></td></tr></table></figure>
-
-<p>复制代码</p>
-
+        
       
 
       
@@ -625,42 +527,7 @@
 <p>SW0(config-if-range)switchport mode access</p>
 <p>SW0(config-if-range)switchport access vlan 10</p>
 <p>SW1(config-if)#switchport mode trunk</p>
-<h4 id="虚接口"><a href="#虚接口" class="headerlink" title="虚接口"></a>虚接口</h4><p>SW(config)#ip routing<br>SW(config)#interface vlan 10<br>SW(config-if)#ip address 202.206.64.190 255.255.255.192<br>SW(config-if)#no shutdown</p>
-<h4 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h4><p>SW(config)#ip routing</p>
-<p>SW(config)#ip dhcp excluded-address 202.206.64.126</p>
-<p>SW(config)#ip dhcp pool vlan10</p>
-<p>SW(dhcp-config)#network 202.206.64.128 255.255.255.192</p>
-<p>SW(dhcp-config)#default-router 202.206.64.190</p>
-<h4 id="RIP协议"><a href="#RIP协议" class="headerlink" title="RIP协议"></a>RIP协议</h4><p>Switch(config)#router rip</p>
-<p>Switch(config-router)#version 2</p>
-<p>Switch(config-router)#network 202.206.64.0</p>
-<p>Switch(config-router)#no auto-summary</p>
-<h4 id="配置静态和默认路由"><a href="#配置静态和默认路由" class="headerlink" title="配置静态和默认路由"></a>配置静态和默认路由</h4><p>Router(config)#ip route 202.206.108.0 255.255.255.0 s0/1/0</p>
-<p>Router(config)#ip route 0.0.0.0  0.0.0.0 s0/1/0</p>
-<p>Router(config)#router rip</p>
-<p>Router(config-route)#default-information originate</p>
-<h4 id="配置路由注入"><a href="#配置路由注入" class="headerlink" title="配置路由注入"></a>配置路由注入</h4><p>Router(config)#router rip</p>
-<p>Router(config-route)#redistribute static metric 10</p>
-<h3 id="2-C语言"><a href="#2-C语言" class="headerlink" title="2.C语言"></a>2.C语言</h3><h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p> 拷贝#include包含的文件代码、替换#define定义的宏、条件编译#if</p>
-<h3 id="3-java语言"><a href="#3-java语言" class="headerlink" title="3.java语言"></a>3.java语言</h3><p><strong>JDK 和 JRE 有什么区别？</strong><br>JDK：Java Development Kit 的简称，java 开发工具包，提供了 java 的开发环境和运行环境。<br>JRE：Java Runtime Environment 的简称，java 运行环境，为 java 的运行提供了所需环境。<br><strong>Files的常用方法都有哪些？</strong><br>Files.exists()：检测文件路径是否存在。<br>Files.createFile()：创建文件。<br>Files.createDirectory()：创建文件夹。<br>Files.delete()：删除一个文件或目录。<br>Files.copy()：复制文件。<br>Files.move()：移动文件。<br>Files.size()：查看文件个数。<br>Files.read()：读取文件。<br>Files.write()：写入文件。</p>
-<h3 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h3><p><strong>TCP连接，断开</strong><br>三次握手<br>G：在吗(SYN=1, seq=x)<br>S：在(SYN=1, ACK=1, seq=y, ACKnum=x+1)<br>G：我要发东西了(ACK=1，ACKnum=y+1)</p>
-<p>四次挥手<br>G： 我想关闭链接了(FIN=1，seq=x)<br>S： 我准备一下(ACK=1，ACKnum=x+1)<br>S： 我准备好了(FIN=1，seq=y)<br>G： 好，关了(ACK=1，ACKnum=y+1)</p>
-<p><strong>HTTP响应</strong><br>1xx：信息，请求收到，继续处理<br>2xx：成功，行为被成功地接受、理解和采纳<br>3xx：重定向，为了完成请求，必须进一步执行的动作<br>4xx：客户端错误，请求包含语法错误或者请求无法实现<br>5xx：服务器错误，服务器不能实现一种明显无效的请求<br>200 ok 一切正常<br>302 Moved Temporatily 文件临时移出<br>404 not found</p>
-<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><p>pwd 显示当前工作目录<br>cd 切换工作目录<br>mkdir： 创建目录<br>touch 创建普通文本<br>echo 输出一段文本至终端<br>cat 查看文本内容<br>rm remove 删除文件<br>-r 删除目录时使用<br>-f 强制删除<br>tail 默认查看末尾后10行的文本内容<br>reboot 重启系统<br>poweroff<br>kill 关闭一个进程</p>
-<p><strong>vim三种模式：</strong></p>
-<p>命令模式 ：可以执行一些操作，比如复制黏贴删除等</p>
-<p>编辑模式： 就是可以写入文本内容</p>
-<p>末行模式： 可以执行一些操作，如文件的保存以及退出<br>保存退出：</p>
-<p>w 保存</p>
-<p>q 退出</p>
-<p>wq 保存并且退出</p>
-<p>q! 强制退出</p>
-<p>wq! 强制保存退出<br>i   编辑模式<br>： 末行模式<br>ESC 命令模式</p>
-<p><strong>实现负载均衡加高可用方案</strong><br> 方案一：nginx+keepalived</p>
-<p>方案二：lvs+keepalived<br><strong>ansible自动化,mariadb数据库,zabbix监控</strong></p>
-<h3 id="CTF工具"><a href="#CTF工具" class="headerlink" title="CTF工具"></a>CTF工具</h3><p>在线工具，BASE36解码，编码，AES，DES加密<br>CMD5加解密<br>winHEX 图片隐写类<br>BRUP suite抓包工具<br>IDA 逆向分析<br>dirsearch 网站目录结构扫描器</p>
-<h3 id="软件定义网络"><a href="#软件定义网络" class="headerlink" title="软件定义网络"></a>软件定义网络</h3><p>1、使用PYTHON开发个AGENT部署在要监控的网元上，这里要利用python把要在网元上操作的命令封装在开发的AGENT中<br>2、利用ZABBIX和AGENT通信进行数据收集，在ZABBIX中可以设置各种触发条件和操作<br>3、针对不同的问题再把操作命令发送到相关网元</p>
-
+        
       
 
       
@@ -745,10 +612,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="张氏饭谱"><a href="#张氏饭谱" class="headerlink" title="张氏饭谱"></a>张氏饭谱</h1><h3 id="1-玉米粥（两碗）"><a href="#1-玉米粥（两碗）" class="headerlink" title="1.    玉米粥（两碗）"></a>1.    玉米粥（两碗）</h3><p>水：三碗水，烧热80度刚冒泡，干的取出来<br>玉米面 半杯 细的多点 加1/8勺碱<br>搅拌进水<br>一直大火，一直搅，到粘稠<br>放干的，小火，3分钟，再等5分钟，吃饭饭</p>
-<h3 id="2-大米饭"><a href="#2-大米饭" class="headerlink" title="2.    大米饭"></a>2.    大米饭</h3><p>水：三碗水，米投干净放入，酱的，多半杯，加1/8勺碱，加干的 大火至热气冒出锅盖，小火5分钟，看干的是否软和，即可关火，再等5分钟，吃饭饭</p>
-<h3 id="3-绿豆饭"><a href="#3-绿豆饭" class="headerlink" title="3.    绿豆饭"></a>3.    绿豆饭</h3><p>一碗半水，加绿豆少半杯，加1/8勺碱，加干的 大火至热气冒出锅盖，拿出干的，加一碗凉水，再放入干的，大火至热气冒出锅盖，再拿出干的，加一碗凉水，再放入干的，大火至热气冒出锅盖，然后小火5分钟，即可关火，再等5分钟，吃饭饭</p>
-<h3 id="4-热面条"><a href="#4-热面条" class="headerlink" title="4.    热面条"></a>4.    热面条</h3><p>切葱，香菜<br>小火干锅，倒摸底杯油，即将有冒泡（热气）加葱，加1/8勺盐，加一勺酱油，加水3碗，加干的，大火烧至热气冒出锅盖，看干的是否软和，干的拿出，加面条一手圈，筷子带散面条，此处可加鸡蛋，大火烧至热气冒出锅盖，小火2分钟，可关火吃饭</p>
-
+        
       
 
       
@@ -838,25 +702,8 @@
 <h6 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h6><p>  熟悉C语言程序设计，做过用C语言写的成绩查询系统</p>
 <p>  熟悉java语言程序设计，做过用java语言写的带GUI的时钟</p>
 <p>  学习过C#，python等语言，尝试编写过程序，搭建过个人网站</p>
-<p>  学过微机原理，并设计制作红绿灯的课设</p>
-<p>  学习过网络协议，熟悉计算机网络五层架构</p>
-<p>  自建小型数据库，实现增删改等功能</p>
-<p>  熟悉数据结构，做过IP地址查询的程序</p>
-<p>  了解物联网技术，做过关于温湿度测试的安卓程序</p>
-<p>  参加金工实习、电工实习，自制过一台收音机</p>
-<p>  毕业设计制作了一个基于微信小程序的安睡枕，成功实现了arduino到onenet再到微    信小程序的完美结合</p>
-<h6 id="主修课程"><a href="#主修课程" class="headerlink" title="主修课程"></a>主修课程</h6><p>C语言程序设计，Java程序设计，计算机网络，Windows程序设计，Linux程序设计，网络规划与设计，web体系结构，网络安全技术，python程序设计，组网工程，网络管理与安全运营</p>
-<h6 id="实践能力"><a href="#实践能力" class="headerlink" title="实践能力"></a>实践能力</h6><p>2016年加入“PC爱好者”“MIUI”社团，学习到计算机硬件组装，计算机除尘保养等方面知识</p>
-<p>2017年在创业园参与创建“北辰游戏工作室”，负责微信公众号运维，游戏测试等</p>
-<p>2019年参加北京鑫享鸿福教育咨询有限公司实习，完成Linux高可用负载均衡的服务器集群运维，成绩良好</p>
-<p>2019年参加组网工程实习，搭建校园网</p>
-<h6 id="获奖经历"><a href="#获奖经历" class="headerlink" title="获奖经历"></a>获奖经历</h6><p>2018参加CTF比赛，获河北省大学生网络与信息安全大赛省三等奖</p>
-<p> 2019研究设计软件定义网络，获网络技术挑战赛华北赛区三等奖</p>
-<h6 id="自我评估"><a href="#自我评估" class="headerlink" title="自我评估"></a>自我评估</h6><p>本人性格开朗、为人诚恳、乐观向上、拥有较强的学习能力和适应能力]()，能够条理清楚的完成工作</p>
-<p>在校期间各科成绩优异，没有挂科行为，成绩在班级处于中上水平</p>
-<p>积极参加班级的各种活动，利用课余时间自学计算机相关知识</p>
-<p> 我喜欢编程，喜欢逛csdn，github，爱做一些有意思的小程序</p>
-
+<p>  学过微机原理，并设计制作红绿灯的课设<br>
+        
       
 
       
@@ -942,38 +789,7 @@
       
         <p>关于决策树的理论知识可以查看：<a href="http://quanfita.cn/2018/03/03/decision_tree/" target="_blank" rel="noopener">决策树</a></p>
 <h2 id="Titanic数据集概述"><a href="#Titanic数据集概述" class="headerlink" title="Titanic数据集概述"></a>Titanic数据集概述</h2><p>&emsp;&emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。</p>
-<h2 id="代码实战"><a href="#代码实战" class="headerlink" title="代码实战"></a>代码实战</h2><p>首先，一如既往导入数据集，并查看一下部分数据</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">titanic = pd.read_csv(<span class="string">'http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic.txt'</span>)</span><br><span class="line">titanic.head()</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdn.net/2018032220364373?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNjExNjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br>info可以查看一下数据集的基本信息，我们可以看到数据集中有部分缺失值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">titanic.info()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;</span><br><span class="line">&gt; RangeIndex: 1313 entries, 0 to 1312</span><br><span class="line">&gt; Data columns (total 11 columns):</span><br><span class="line">&gt; row.names    1313 non-null int64</span><br><span class="line">&gt; pclass       1313 non-null object</span><br><span class="line">&gt; survived     1313 non-null int64</span><br><span class="line">&gt; name         1313 non-null object</span><br><span class="line">&gt; age          633 non-null float64</span><br><span class="line">&gt; embarked     821 non-null object</span><br><span class="line">&gt; home.dest    754 non-null object</span><br><span class="line">&gt; room         77 non-null object</span><br><span class="line">&gt; ticket       69 non-null object</span><br><span class="line">&gt; boat         347 non-null object</span><br><span class="line">&gt; sex          1313 non-null object</span><br><span class="line">&gt; dtypes: float64(1), int64(2), object(8)</span><br><span class="line">&gt; memory usage: 112.9+ KB</span><br></pre></td></tr></table></figure>
-
-<p>我们从中选取三个特征来对数据进行预测</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X = titanic[[<span class="string">'pclass'</span>,<span class="string">'age'</span>,<span class="string">'sex'</span>]]</span><br><span class="line">y = titanic[<span class="string">'survived'</span>]</span><br><span class="line"></span><br><span class="line">X.info()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;</span><br><span class="line">&gt; RangeIndex: 1313 entries, 0 to 1312</span><br><span class="line">&gt; Data columns (total 3 columns):</span><br><span class="line">&gt; pclass    1313 non-null object</span><br><span class="line">&gt; age       633 non-null float64</span><br><span class="line">&gt; sex       1313 non-null object</span><br><span class="line">&gt; dtypes: float64(1), object(2)</span><br><span class="line">&gt; memory usage: 30.9+ KB</span><br></pre></td></tr></table></figure>
-
-<p>age具有缺失值，所以我们要对缺失值进行处理</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X[<span class="string">'age'</span>].fillna(X[<span class="string">'age'</span>].mean(),inplace=<span class="literal">True</span>)</span><br><span class="line">X.info()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; &lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;</span><br><span class="line">&gt; RangeIndex: 1313 entries, 0 to 1312</span><br><span class="line">&gt; Data columns (total 3 columns):</span><br><span class="line">&gt; pclass    1313 non-null object</span><br><span class="line">&gt; age       1313 non-null float64</span><br><span class="line">&gt; sex       1313 non-null object</span><br><span class="line">&gt; dtypes: float64(1), object(2)</span><br><span class="line">&gt; memory usage: 30.9+ KB</span><br></pre></td></tr></table></figure>
-
-<p>之后就是将数据集划分成训练集和测试集</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,Y_train,Y_test = train_test_split(X,y,test_size=<span class="number">0.25</span>,random_state=<span class="number">33</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.feature_extraction <span class="keyword">import</span> DictVectorizer</span><br><span class="line">vec = DictVectorizer(sparse=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">X_train = vec.fit_transform(X_train.to_dict(orient=<span class="string">'record'</span>))</span><br><span class="line">print(vec.feature_names_)</span><br><span class="line">X_test = vec.fit_transform(X_test.to_dict(orient=<span class="string">'record'</span>))</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>[‘age’, ‘pclass=1st’, ‘pclass=2nd’, ‘pclass=3rd’, ‘sex=female’, ‘sex=male’]</p>
-</blockquote>
-<p>导入决策树模型，并进行预测</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line">dtc = DecisionTreeClassifier()</span><br><span class="line">dtc.fit(X_train,Y_train)</span><br><span class="line">y_predict = dtc.predict(X_test)</span><br></pre></td></tr></table></figure>
-
-<p>最后，检查一下模型的效果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report</span><br><span class="line"></span><br><span class="line">print(dtc.score(X_test,Y_test))</span><br><span class="line">print(classification_report(y_predict,Y_test,target_names=[<span class="string">'died'</span>,<span class="string">'survived'</span>]))</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdn.net/2018032220361216?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNjExNjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br>代码参考：《Python机器学习及实践：从零开始通往Kaggle竞赛之路》</p>
-
+        
       
 
       
@@ -1071,13 +887,8 @@
 <h2 id="假期总结"><a href="#假期总结" class="headerlink" title="假期总结"></a>假期总结</h2><ol>
 <li>学习李航的《统计学习方法》并做好笔记整理（学是学完了，笔记整理可累死我了…到现在还没整完）</li>
 <li>用TensorFlow搭建一个完整的图像分类器</li>
-<li>利用TensorFlow神经网络参加Kaggle竞赛两次（过年这几天都是晚上回家白天出去，所以没时间搭模型，只参加了Titanic生还者预测和Digit手写字体识别）</li>
-<li>大年三十准时观看bilibili拜年祭（因为春晚太无聊了。。。所以我估计以后的除夕夜我都是看拜年祭的）</li>
-<li>学习Andrew Ng的Coursera课程（只看到第四部分卷积神经网络）</li>
-<li>搭建个人博客（嗯，你们如果看到这篇文章就一定也知道我的博客长什么样了）</li>
-<li>给一个初一的小妹妹补数学（滑稽脸）</li>
-</ol>
-
+<li>利用TensorFlow神经网络参加Kaggle竞赛两次（过年这几天都是晚上回家白天出去，所以没时间搭模型，只参加了Titanic生还者预测和Digit手写字体识别）
+        
       
 
       
@@ -1223,8 +1034,14 @@
       		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
       	</div>
     </div>
+    <div calss="count-span">
+      <span id="busuanzi_container_site_pv">
+          总访问量: <span id="busuanzi_value_site_pv"></span>
+    </div>
   </div>
 </footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -1300,6 +1117,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">study</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
               </li>
              
@@ -1309,14 +1134,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">decision tree</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">study</a>
               </li>
              
               <li class="article-tag-list-item">

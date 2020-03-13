@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://zhangjushun.gitHub.io">
   <title>机器学习入门实战——决策树算法实战Titanic数据集 | zhangjushun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于决策树的理论知识可以查看：决策树 Titanic数据集概述&amp;emsp;&amp;emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。 代码实战首先，一如既往导入数据集，并查看一下部分数据">
+  <meta name="description" content="关于决策树的理论知识可以查看：决策树 Titanic数据集概述&amp;emsp;&amp;emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。">
 <meta name="keywords" content="Machine Learning,Titanic,decision tree">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习入门实战——决策树算法实战Titanic数据集">
 <meta property="og:url" content="https://zhangjushun.gitHub.io/2019/11/01/decision_tree_titanic/index.html">
 <meta property="og:site_name" content="zhangjushun">
-<meta property="og:description" content="关于决策树的理论知识可以查看：决策树 Titanic数据集概述&amp;emsp;&amp;emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。 代码实战首先，一如既往导入数据集，并查看一下部分数据">
+<meta property="og:description" content="关于决策树的理论知识可以查看：决策树 Titanic数据集概述&amp;emsp;&amp;emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img-blog.csdn.net/2018032220364373?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNjExNjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/2018032220361216?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNjExNjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2019-10-13T01:51:49.000Z">
+<meta property="og:updated_time" content="2020-03-13T04:36:05.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习入门实战——决策树算法实战Titanic数据集">
-<meta name="twitter:description" content="关于决策树的理论知识可以查看：决策树 Titanic数据集概述&amp;emsp;&amp;emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。 代码实战首先，一如既往导入数据集，并查看一下部分数据">
+<meta name="twitter:description" content="关于决策树的理论知识可以查看：决策树 Titanic数据集概述&amp;emsp;&amp;emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。">
 <meta name="twitter:image" content="https://img-blog.csdn.net/2018032220364373?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNjExNjAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
   
     <link rel="alternative" href="/atom.xml" title="zhangjushun" type="application/atom+xml">
@@ -178,6 +178,7 @@
       
         <p>关于决策树的理论知识可以查看：<a href="http://quanfita.cn/2018/03/03/decision_tree/" target="_blank" rel="noopener">决策树</a></p>
 <h2 id="Titanic数据集概述"><a href="#Titanic数据集概述" class="headerlink" title="Titanic数据集概述"></a>Titanic数据集概述</h2><p>&emsp;&emsp;RMS泰坦尼克号的沉没是历史上最臭名昭着的沉船之一。 1912年4月15日，在首航期间，泰坦尼克号撞上一座冰山后沉没，2224名乘客和机组人员中有1502人遇难。这一耸人听闻的悲剧震撼了国际社会，导致了更好的船舶安全条例。预测是否有乘客幸存下来的泰坦尼克号。</p>
+<a id="more"></a>
 <h2 id="代码实战"><a href="#代码实战" class="headerlink" title="代码实战"></a>代码实战</h2><p>首先，一如既往导入数据集，并查看一下部分数据</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">titanic = pd.read_csv(<span class="string">'http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic.txt'</span>)</span><br><span class="line">titanic.head()</span><br></pre></td></tr></table></figure>
 
@@ -402,8 +403,14 @@
       		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
       	</div>
     </div>
+    <div calss="count-span">
+      <span id="busuanzi_container_site_pv">
+          总访问量: <span id="busuanzi_value_site_pv"></span>
+    </div>
   </div>
 </footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -479,6 +486,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">study</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Machine Learning</a>
               </li>
              
@@ -488,14 +503,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">decision tree</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">study</a>
               </li>
              
               <li class="article-tag-list-item">
