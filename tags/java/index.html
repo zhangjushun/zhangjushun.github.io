@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zhangjushun.gitHub.io">
-  <title>简历总结 | zhangjushun</title>
+  <title>Tag: java | zhangjushun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.组网交换机SW0(config)#interface range f0/1-2 SW0(config-if-range)switchport mode access SW0(config-if-range)switchport access vlan 10 SW1(config-if)#switchport mode trunk">
-<meta name="keywords" content="study">
-<meta property="og:type" content="article">
-<meta property="og:title" content="简历总结">
-<meta property="og:url" content="https://zhangjushun.gitHub.io/2020/02/28/简历总结/index.html">
+  <meta name="description" content="脱非入欧">
+<meta property="og:type" content="website">
+<meta property="og:title" content="zhangjushun">
+<meta property="og:url" content="https://zhangjushun.gitHub.io/tags/java/index.html">
 <meta property="og:site_name" content="zhangjushun">
-<meta property="og:description" content="1.组网交换机SW0(config)#interface range f0/1-2 SW0(config-if-range)switchport mode access SW0(config-if-range)switchport access vlan 10 SW1(config-if)#switchport mode trunk">
+<meta property="og:description" content="脱非入欧">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-13T04:37:46.376Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简历总结">
-<meta name="twitter:description" content="1.组网交换机SW0(config)#interface range f0/1-2 SW0(config-if-range)switchport mode access SW0(config-if-range)switchport access vlan 10 SW1(config-if)#switchport mode trunk">
+<meta name="twitter:title" content="zhangjushun">
+<meta name="twitter:description" content="脱非入欧">
   
     <link rel="alternative" href="/atom.xml" title="zhangjushun" type="application/atom+xml">
   
@@ -159,117 +157,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-简历总结" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      简历总结
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/03/15/java-2020-03-15/" class="archive-article-date">
+  	<time datetime="2020-03-15T06:32:44.856Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/03/15/java-2020-03-15/">java学习-2020-03-15</a>
     </h1>
   
 
-        
-        <a href="/2020/02/28/简历总结/" class="archive-article-date">
-  	<time datetime="2020-02-28T04:29:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-组网"><a href="#1-组网" class="headerlink" title="1.组网"></a>1.组网</h3><h4 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h4><p>SW0(config)#interface range f0/1-2</p>
-<p>SW0(config-if-range)switchport mode access</p>
-<p>SW0(config-if-range)switchport access vlan 10</p>
-<p>SW1(config-if)#switchport mode trunk</p>
-<a id="more"></a>
-<h4 id="虚接口"><a href="#虚接口" class="headerlink" title="虚接口"></a>虚接口</h4><p>SW(config)#ip routing<br>SW(config)#interface vlan 10<br>SW(config-if)#ip address 202.206.64.190 255.255.255.192<br>SW(config-if)#no shutdown</p>
-<h4 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h4><p>SW(config)#ip routing</p>
-<p>SW(config)#ip dhcp excluded-address 202.206.64.126</p>
-<p>SW(config)#ip dhcp pool vlan10</p>
-<p>SW(dhcp-config)#network 202.206.64.128 255.255.255.192</p>
-<p>SW(dhcp-config)#default-router 202.206.64.190</p>
-<h4 id="RIP协议"><a href="#RIP协议" class="headerlink" title="RIP协议"></a>RIP协议</h4><p>Switch(config)#router rip</p>
-<p>Switch(config-router)#version 2</p>
-<p>Switch(config-router)#network 202.206.64.0</p>
-<p>Switch(config-router)#no auto-summary</p>
-<h4 id="配置静态和默认路由"><a href="#配置静态和默认路由" class="headerlink" title="配置静态和默认路由"></a>配置静态和默认路由</h4><p>Router(config)#ip route 202.206.108.0 255.255.255.0 s0/1/0</p>
-<p>Router(config)#ip route 0.0.0.0  0.0.0.0 s0/1/0</p>
-<p>Router(config)#router rip</p>
-<p>Router(config-route)#default-information originate</p>
-<h4 id="配置路由注入"><a href="#配置路由注入" class="headerlink" title="配置路由注入"></a>配置路由注入</h4><p>Router(config)#router rip</p>
-<p>Router(config-route)#redistribute static metric 10</p>
-<h3 id="2-C语言"><a href="#2-C语言" class="headerlink" title="2.C语言"></a>2.C语言</h3><h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p> 拷贝#include包含的文件代码、替换#define定义的宏、条件编译#if</p>
-<h3 id="3-java语言"><a href="#3-java语言" class="headerlink" title="3.java语言"></a>3.java语言</h3><p><strong>JDK 和 JRE 有什么区别？</strong><br>JDK：Java Development Kit 的简称，java 开发工具包，提供了 java 的开发环境和运行环境。<br>JRE：Java Runtime Environment 的简称，java 运行环境，为 java 的运行提供了所需环境。<br><strong>Files的常用方法都有哪些？</strong><br>Files.exists()：检测文件路径是否存在。<br>Files.createFile()：创建文件。<br>Files.createDirectory()：创建文件夹。<br>Files.delete()：删除一个文件或目录。<br>Files.copy()：复制文件。<br>Files.move()：移动文件。<br>Files.size()：查看文件个数。<br>Files.read()：读取文件。<br>Files.write()：写入文件。</p>
-<h3 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h3><p><strong>TCP连接，断开</strong><br>三次握手<br>G：在吗(SYN=1, seq=x)<br>S：在(SYN=1, ACK=1, seq=y, ACKnum=x+1)<br>G：我要发东西了(ACK=1，ACKnum=y+1)</p>
-<p>四次挥手<br>G： 我想关闭链接了(FIN=1，seq=x)<br>S： 我准备一下(ACK=1，ACKnum=x+1)<br>S： 我准备好了(FIN=1，seq=y)<br>G： 好，关了(ACK=1，ACKnum=y+1)</p>
-<p><strong>HTTP响应</strong><br>1xx：信息，请求收到，继续处理<br>2xx：成功，行为被成功地接受、理解和采纳<br>3xx：重定向，为了完成请求，必须进一步执行的动作<br>4xx：客户端错误，请求包含语法错误或者请求无法实现<br>5xx：服务器错误，服务器不能实现一种明显无效的请求<br>200 ok 一切正常<br>302 Moved Temporatily 文件临时移出<br>404 not found</p>
-<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><p>pwd 显示当前工作目录<br>cd 切换工作目录<br>mkdir： 创建目录<br>touch 创建普通文本<br>echo 输出一段文本至终端<br>cat 查看文本内容<br>rm remove 删除文件<br>-r 删除目录时使用<br>-f 强制删除<br>tail 默认查看末尾后10行的文本内容<br>reboot 重启系统<br>poweroff<br>kill 关闭一个进程</p>
-<p><strong>vim三种模式：</strong></p>
-<p>命令模式 ：可以执行一些操作，比如复制黏贴删除等</p>
-<p>编辑模式： 就是可以写入文本内容</p>
-<p>末行模式： 可以执行一些操作，如文件的保存以及退出<br>保存退出：</p>
-<p>w 保存</p>
-<p>q 退出</p>
-<p>wq 保存并且退出</p>
-<p>q! 强制退出</p>
-<p>wq! 强制保存退出<br>i   编辑模式<br>： 末行模式<br>ESC 命令模式</p>
-<p><strong>实现负载均衡加高可用方案</strong><br> 方案一：nginx+keepalived</p>
-<p>方案二：lvs+keepalived<br><strong>ansible自动化,mariadb数据库,zabbix监控</strong></p>
-<h3 id="CTF工具"><a href="#CTF工具" class="headerlink" title="CTF工具"></a>CTF工具</h3><p>在线工具，BASE36解码，编码，AES，DES加密<br>CMD5加解密<br>winHEX 图片隐写类<br>BRUP suite抓包工具<br>IDA 逆向分析<br>dirsearch 网站目录结构扫描器</p>
-<h3 id="软件定义网络"><a href="#软件定义网络" class="headerlink" title="软件定义网络"></a>软件定义网络</h3><p>1、使用PYTHON开发个AGENT部署在要监控的网元上，这里要利用python把要在网元上操作的命令封装在开发的AGENT中<br>2、利用ZABBIX和AGENT通信进行数据收集，在ZABBIX中可以设置各种触发条件和操作<br>3、针对不同的问题再把操作命令发送到相关网元</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">study</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -282,136 +211,17 @@
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://zhangjushun.gitHub.io/2020/02/28/简历总结/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/02/28/hexo日常/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo日常
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/02/19/张氏饭谱/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">张氏菜谱</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-   
-      <div class="valine_comment"></div>
-<!--载入js，在<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>之前插入即可-->
-<!--Leancloud 操作库:-->
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<!--Valine 的核心代码库-->
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-  var notify = 'false' == true ? true : false;
-  var verify = 'false' == true ? true : false;
-  new Valine({
-      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
-      av: AV,
-      el: '.valine_comment',
-      emoticon_url: 'https://cloud.panjunwen.com/alu',
-      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
-      app_id: 'FXRiTeKDxJbo2azJ9vtSITIi-gzGzoHsz',
-      app_key: 'GalkOr1CE1uEKgJsgTWneVwD',
-      placeholder: '有话要说？'
-    });
-</script>
 
     
-  
-  
-  
-
-  
-
-  
-
-  
 
 
           </div>
@@ -440,9 +250,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
