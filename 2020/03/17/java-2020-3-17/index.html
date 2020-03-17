@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zhangjushun.gitHub.io">
-  <title>Archives | zhangjushun</title>
+  <title>java学习-2020-03-17 | zhangjushun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="脱非入欧">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhangjushun">
-<meta property="og:url" content="https://zhangjushun.gitHub.io/archives/page/2/index.html">
+  <meta name="description" content="java内存  array.fori 12345 int[] arrayE=&amp;#123;5,15,20&amp;#125;;//省略格式//arrayE.fori  可出        for (int i = 0; i &amp;lt; arrayE.length; i++) &amp;#123;                    &amp;#125;   数组最大值 1234567int[] arrayE = &amp;#12">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java学习-2020-03-17">
+<meta property="og:url" content="https://zhangjushun.gitHub.io/2020/03/17/java-2020-3-17/index.html">
 <meta property="og:site_name" content="zhangjushun">
-<meta property="og:description" content="脱非入欧">
+<meta property="og:description" content="java内存  array.fori 12345 int[] arrayE=&amp;#123;5,15,20&amp;#125;;//省略格式//arrayE.fori  可出        for (int i = 0; i &amp;lt; arrayE.length; i++) &amp;#123;                    &amp;#125;   数组最大值 1234567int[] arrayE = &amp;#12">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-17T03:41:02.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangjushun">
-<meta name="twitter:description" content="脱非入欧">
+<meta name="twitter:title" content="java学习-2020-03-17">
+<meta name="twitter:description" content="java内存  array.fori 12345 int[] arrayE=&amp;#123;5,15,20&amp;#125;;//省略格式//arrayE.fori  可出        for (int i = 0; i &amp;lt; arrayE.length; i++) &amp;#123;                    &amp;#125;   数组最大值 1234567int[] arrayE = &amp;#12">
   
     <link rel="alternative" href="/atom.xml" title="zhangjushun" type="application/atom+xml">
   
@@ -157,128 +159,261 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java-2020-3-17" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/23/2017_2018_winter_holiday/" class="archive-article-date">
-  	<time datetime="2019-06-23T14:28:40.533Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/23/2017_2018_winter_holiday/">2017~2018年寒假总结</a>
+    <h1 class="article-title" itemprop="name">
+      java学习-2020-03-17
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/03/17/java-2020-3-17/" class="archive-article-date">
+  	<time datetime="2020-03-17T03:38:46.922Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> java内存</p>
+<p> array.fori</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> int[] arrayE=&#123;5,15,20&#125;;//省略格式</span><br><span class="line">//arrayE.fori  可出</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; arrayE.length; i++) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p> 数组最大值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int[] arrayE = &#123;5, 15, 20&#125;;//省略格式</span><br><span class="line">       int max = arrayE[0];</span><br><span class="line">       <span class="keyword">for</span> (int i = 1; i &lt; arrayE.length; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (arrayE[i] &gt; max) &#123;</span><br><span class="line">               max = arrayE[i];</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+<p> 数组翻转（只能用一个数组）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String[] arrayD = new String[]&#123;<span class="string">"hello"</span>, <span class="string">"word"</span>&#125;;//静态初始化</span><br><span class="line">int[] arrayE = &#123;5, 89, 15, 80, 16, 20&#125;;//省略格式</span><br><span class="line"><span class="keyword">for</span> (int min = 0, max = arrayE.length - 1; min &lt; max; min++, max--) &#123;</span><br><span class="line">    int temp = arrayE[min];</span><br><span class="line">    arrayE[min] = arrayE[max];</span><br><span class="line">    arrayE[max] = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (int i = 0; i &lt; arrayE.length; i++) &#123;</span><br><span class="line">    System.out.println(arrayE[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 数组方法，返回多个值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public static int[]  cate(int a, int b, int c)&#123;</span><br><span class="line">        int sum = a + b + c;</span><br><span class="line">        int avg = sum / 3;</span><br><span class="line">        int[] array = &#123;sum, avg&#125;;</span><br><span class="line">        <span class="built_in">return</span> array;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>成员变量直接定义在类当中，在方法外</p>
+<p>成员方法不加static关键字</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">   </span><br><span class="line">        String name;</span><br><span class="line">        int age;</span><br><span class="line"></span><br><span class="line">        public  void <span class="function"><span class="title">eat</span></span>()&#123;</span><br><span class="line">            System.out.println(<span class="string">"chifan"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        public  void <span class="function"><span class="title">sleep</span></span>()&#123;</span><br><span class="line">            System.out.println(<span class="string">"shuijaio"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用类</p>
+<p>1.导包  </p>
+<p>import 包名称.类名称（在同一包下可省略） </p>
+<p>2.创建</p>
+<p>类名称   对象名=new 类名称（）；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student stu=new Student（）；</span><br></pre></td></tr></table></figure>
+
+<p>3.使用</p>
+<p>用谁.shei</p>
+<p>局部变量</p>
+<p>成员变量==全局变量</p>
+<p>1定义位置   方法内  外</p>
+<p>2作用范围    出了方法不能用：整个类全通用</p>
+<p>3默认值不一样   一个手动赋值;一个和数组一样</p>
+<p>面向对象 封装继承多态</p>
+<p>1）封装</p>
+<p>方法 就是；private也是（对成员变量进行修饰，不能直接访问，提高安全性，限制数据）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public void setAge(int num) &#123;</span><br><span class="line">        age = num; //间接设置，设置<span class="keyword">if</span>-else对数据进行限制</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> age;//间接获取</span><br><span class="line">    &#125;</span><br><span class="line">    public void <span class="function"><span class="title">sleep</span></span>() &#123;</span><br><span class="line">        System.out.println(<span class="string">"shuijaio"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this.成员变量</p>
+<p>可以在重名时辨别，谁(类)调用的方法，谁就是this；</p>
+<p>构造方法（至少一个，可以重载）</p>
+<p>专门用来创造对象的方法  new就是在调用构造方法</p>
+<p>与类名称一样，不写返回值，不写return</p>
+<p>存在默认空的构造方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public <span class="function"><span class="title">Student</span></span>()&#123;</span><br><span class="line">        System.out.println(<span class="string">"zhixingle"</span>);//没有void</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>标准的类（java Bean）</p>
+<p>1.成员变量都用private</p>
+<p>2.每个成员变量都有getter/setter   Alt+insert</p>
+<p>3.无参的构造方法</p>
+<p>4.全参构造方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public <span class="function"><span class="title">Student</span></span>()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public Student(String name, int age) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zhangjushun.gitHub.io/2020/03/17/java-2020-3-17/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/17/title/" class="archive-article-date">
-  	<time datetime="2019-06-17T10:08:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/15/java-2020-03-15/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java学习-2020-03-15</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/17/title/">title</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/17/hello-world/" class="archive-article-date">
-  	<time datetime="2019-06-17T10:00:41.565Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/17/hello-world/">Hello World</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+   
+      <div class="valine_comment"></div>
+<!--载入js，在<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'false' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV,
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'FXRiTeKDxJbo2azJ9vtSITIi-gzGzoHsz',
+      app_key: 'GalkOr1CE1uEKgJsgTWneVwD',
+      placeholder: '有话要说？'
+    });
+</script>
 
     
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+  
+  
+
+  
+
+  
+
   
 
 
@@ -308,8 +443,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
