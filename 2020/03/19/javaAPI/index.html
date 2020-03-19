@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zhangjushun.gitHub.io">
-  <title>java学习-2020-03-17 | zhangjushun</title>
+  <title>javaAPI-2020-03-19 | zhangjushun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="java内存  array.fori 12345 int[] arrayE=&amp;#123;5,15,20&amp;#125;;//省略格式//arrayE.fori  可出        for (int i = 0; i &amp;lt; arrayE.length; i++) &amp;#123;                    &amp;#125;   数组最大值 1234567int[] arrayE = &amp;#12">
+  <meta name="description" content="API包，构造方法，方法； 1.   Scanner 123456import java.util.Scanner;   Scanner scanner=new Scanner(System.in);int num1 = scanner.nextInt();int num2 = scanner.nextInt();  匿名对象 只能用唯一一次（确定只用一次），没左边类名，对象名，赋值符号 2. R">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java学习-2020-03-17">
-<meta property="og:url" content="https://zhangjushun.gitHub.io/2020/03/17/java-2020-3-17/index.html">
+<meta property="og:title" content="javaAPI-2020-03-19">
+<meta property="og:url" content="https://zhangjushun.gitHub.io/2020/03/19/javaAPI/index.html">
 <meta property="og:site_name" content="zhangjushun">
-<meta property="og:description" content="java内存  array.fori 12345 int[] arrayE=&amp;#123;5,15,20&amp;#125;;//省略格式//arrayE.fori  可出        for (int i = 0; i &amp;lt; arrayE.length; i++) &amp;#123;                    &amp;#125;   数组最大值 1234567int[] arrayE = &amp;#12">
+<meta property="og:description" content="API包，构造方法，方法； 1.   Scanner 123456import java.util.Scanner;   Scanner scanner=new Scanner(System.in);int num1 = scanner.nextInt();int num2 = scanner.nextInt();  匿名对象 只能用唯一一次（确定只用一次），没左边类名，对象名，赋值符号 2. R">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-17T03:41:02.939Z">
+<meta property="og:updated_time" content="2020-03-19T15:36:05.248Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java学习-2020-03-17">
-<meta name="twitter:description" content="java内存  array.fori 12345 int[] arrayE=&amp;#123;5,15,20&amp;#125;;//省略格式//arrayE.fori  可出        for (int i = 0; i &amp;lt; arrayE.length; i++) &amp;#123;                    &amp;#125;   数组最大值 1234567int[] arrayE = &amp;#12">
+<meta name="twitter:title" content="javaAPI-2020-03-19">
+<meta name="twitter:description" content="API包，构造方法，方法； 1.   Scanner 123456import java.util.Scanner;   Scanner scanner=new Scanner(System.in);int num1 = scanner.nextInt();int num2 = scanner.nextInt();  匿名对象 只能用唯一一次（确定只用一次），没左边类名，对象名，赋值符号 2. R">
   
     <link rel="alternative" href="/atom.xml" title="zhangjushun" type="application/atom+xml">
   
@@ -159,78 +159,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java-2020-3-17" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javaAPI" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java学习-2020-03-17
+      javaAPI-2020-03-19
     </h1>
   
 
         
-        <a href="/2020/03/17/java-2020-3-17/" class="archive-article-date">
-  	<time datetime="2020-03-17T03:38:46.922Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
+        <a href="/2020/03/19/javaAPI/" class="archive-article-date">
+  	<time datetime="2020-03-19T15:34:40.246Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> java内存</p>
-<p> array.fori</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> int[] arrayE=&#123;5,15,20&#125;;//省略格式</span><br><span class="line">//arrayE.fori  可出</span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; arrayE.length; i++) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>包，构造方法，方法；</p>
+<p><strong>1.   <strong>Scanner</strong></strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">   Scanner scanner=new Scanner(System.in);</span><br><span class="line"></span><br><span class="line">int num1 = scanner.nextInt();</span><br><span class="line">int num2 = scanner.nextInt();</span><br></pre></td></tr></table></figure>
 
-<p> 数组最大值</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int[] arrayE = &#123;5, 15, 20&#125;;//省略格式</span><br><span class="line">       int max = arrayE[0];</span><br><span class="line">       <span class="keyword">for</span> (int i = 1; i &lt; arrayE.length; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (arrayE[i] &gt; max) &#123;</span><br><span class="line">               max = arrayE[i];</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>匿名对象</p>
+<p>只能用唯一一次（确定只用一次），没左边类名，对象名，赋值符号</p>
+<p><strong>2. Random</strong></p>
+<p>随机数</p>
+<p>对象数组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Student[] array=new Student[3];</span><br><span class="line">      Student one = new Student(<span class="string">"张三"</span>,15);</span><br><span class="line">      Student two = new Student(<span class="string">"刘四"</span>,17);</span><br><span class="line">      array[0]=one;</span><br><span class="line">      array[1]=two;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
-<p> 数组翻转（只能用一个数组）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String[] arrayD = new String[]&#123;<span class="string">"hello"</span>, <span class="string">"word"</span>&#125;;//静态初始化</span><br><span class="line">int[] arrayE = &#123;5, 89, 15, 80, 16, 20&#125;;//省略格式</span><br><span class="line"><span class="keyword">for</span> (int min = 0, max = arrayE.length - 1; min &lt; max; min++, max--) &#123;</span><br><span class="line">    int temp = arrayE[min];</span><br><span class="line">    arrayE[min] = arrayE[max];</span><br><span class="line">    arrayE[max] = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (int i = 0; i &lt; arrayE.length; i++) &#123;</span><br><span class="line">    System.out.println(arrayE[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>3.ArrayList</strong></p>
+<p>打开是【】</p>
+<p>导包java.util</p>
+<p><e>泛型 统一的类型，只能是引用类型，不是基本类型</e></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list=new ArrayList&lt;&gt;();</span><br><span class="line">       list.add(<span class="string">"张三"</span>);</span><br><span class="line">       list.add(<span class="string">"李四"</span>);</span><br><span class="line">       System.out.println(list);</span><br></pre></td></tr></table></figure>
 
-<p> 数组方法，返回多个值</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public static int[]  cate(int a, int b, int c)&#123;</span><br><span class="line">        int sum = a + b + c;</span><br><span class="line">        int avg = sum / 3;</span><br><span class="line">        int[] array = &#123;sum, avg&#125;;</span><br><span class="line">        <span class="built_in">return</span> array;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>[张三, 李四]</p>
+<p> 常用方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public boolean add(E var1)</span><br><span class="line">public E get(int var1)</span><br><span class="line">public E remove(int var1)</span><br><span class="line">public int size()</span><br></pre></td></tr></table></figure>
 
-<p>成员变量直接定义在类当中，在方法外</p>
-<p>成员方法不加static关键字</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">   </span><br><span class="line">        String name;</span><br><span class="line">        int age;</span><br><span class="line"></span><br><span class="line">        public  void <span class="function"><span class="title">eat</span></span>()&#123;</span><br><span class="line">            System.out.println(<span class="string">"chifan"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        public  void <span class="function"><span class="title">sleep</span></span>()&#123;</span><br><span class="line">            System.out.println(<span class="string">"shuijaio"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>存储基本类型（包装类）</p>
+<p>byte           Byte</p>
+<p>short         Short</p>
+<p>int              Integer          特殊</p>
+<p>long……</p>
+<p>char               Character        特殊</p>
+<p><strong>4. String</strong></p>
+<p>没new，也是，内容永不可变</p>
+<p>字符串效果相当于char【】，底层原理byte【】</p>
+<p>3+1</p>
+<p>public String（）  空白的</p>
+<p>public String（char【】 array）；</p>
+<p>public String（byte【】 array）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String str1=new String();//01</span><br><span class="line">    char[] array=&#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>&#125;;</span><br><span class="line">    String str2=new String(array);//02</span><br><span class="line">    String str3=<span class="string">"hello"</span>;</span><br></pre></td></tr></table></figure>
 
-<p>使用类</p>
-<p>1.导包  </p>
-<p>import 包名称.类名称（在同一包下可省略） </p>
-<p>2.创建</p>
-<p>类名称   对象名=new 类名称（）；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Student stu=new Student（）；</span><br></pre></td></tr></table></figure>
+<p> 双引号直接写上的在字符串常量池中，new的不在</p>
+<p> 推荐常亮在前，避免出现空指针；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public boolean equals(Object var1)</span><br><span class="line">System.out.println(str1.equals(str2));  //判断内容相等</span><br><span class="line"></span><br><span class="line"> String str4=str3.concat(str2);//拼接</span><br></pre></td></tr></table></figure>
 
-<p>3.使用</p>
-<p>用谁.shei</p>
-<p>局部变量</p>
-<p>成员变量==全局变量</p>
-<p>1定义位置   方法内  外</p>
-<p>2作用范围    出了方法不能用：整个类全通用</p>
-<p>3默认值不一样   一个手动赋值;一个和数组一样</p>
-<p>面向对象 封装继承多态</p>
-<p>1）封装</p>
-<p>方法 就是；private也是（对成员变量进行修饰，不能直接访问，提高安全性，限制数据）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public void setAge(int num) &#123;</span><br><span class="line">        age = num; //间接设置，设置<span class="keyword">if</span>-else对数据进行限制</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> age;//间接获取</span><br><span class="line">    &#125;</span><br><span class="line">    public void <span class="function"><span class="title">sleep</span></span>() &#123;</span><br><span class="line">        System.out.println(<span class="string">"shuijaio"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>indexOf获取索引值<br>charAt 获取单个字符</p>
+<p> 字符串截取</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">substring 指定位置到末尾（指定位置）</span><br><span class="line"></span><br><span class="line">string str1 =“Hello”；  //0x666</span><br><span class="line"></span><br><span class="line">str1=“Java”；   //0x999</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">char[] chars=<span class="string">"Hello"</span>.toCharArray(); //字符数组</span><br><span class="line">String s = str4.replace(<span class="string">"a"</span>, <span class="string">"z"</span>);//替换其中的字符</span><br><span class="line"></span><br><span class="line">String[] ss = str4.split(<span class="string">"o"</span>);//分割  \\. 才能切点；</span><br></pre></td></tr></table></figure>
 
-<p>this.成员变量</p>
-<p>可以在重名时辨别，谁(类)调用的方法，谁就是this；</p>
-<p>构造方法（至少一个，可以重载）</p>
-<p>专门用来创造对象的方法  new就是在调用构造方法</p>
-<p>与类名称一样，不写返回值，不写return</p>
-<p>存在默认空的构造方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public <span class="function"><span class="title">Student</span></span>()&#123;</span><br><span class="line">        System.out.println(<span class="string">"zhixingle"</span>);//没有void</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>ALt+回车；可以自动返回一个，只需修改值；</em></p>
+<p><strong>5.static（存储于方法区的静态区）</strong> 变量不再属于对象自己，而是属于所在类，多个对象共享一份数据。</p>
+<pre><code>静态方法，不是成员方法，不属于对象，属于类的   类名称.方法名  用来调用，不能直接访问非静态（先有静态才有动态）
 
-<p>标准的类（java Bean）</p>
-<p>1.成员变量都用private</p>
-<p>2.每个成员变量都有getter/setter   Alt+insert</p>
-<p>3.无参的构造方法</p>
-<p>4.全参构造方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public <span class="function"><span class="title">Student</span></span>()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    public Student(String name, int age) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    public int <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+this不能用，没有对象</code></pre><p>静态代码块：（唯一一次，比构造方法先执行）</p>
+<p>//当第一次用到本类执行唯一一次<br>public class Person {<br>    static {<br>        System.out.println(“静态代码块执行”);<br>    }<br>}</p>
+<p><strong>6.Arrays（数组工具类）</strong></p>
+<p>public static String toString(int[] var0) //将字符串变成数组<br>void sort（数组）//按升序  数字 小到大  自定义要有 comparable支持</p>
+<p>array.forr倒序</p>
+<p>for (int i = array.length - 1; i &gt;= 0; i–) {</p>
+<pre><code>}</code></pre><p>Math（数学）</p>
+<p>double abs（double num）；绝对值</p>
+<pre><code>   ceil                                向上取整
 
+floor                                向下取整</code></pre><p>long round  （double num）； 四舍五入</p>
+<p>Math.PI  圆周律</p>
 
       
 
@@ -342,7 +351,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://zhangjushun.gitHub.io/2020/03/17/java-2020-3-17/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zhangjushun.gitHub.io/2020/03/19/javaAPI/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -356,18 +365,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/19/javaAPI/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          javaAPI-2020-03-19
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/15/java-2020-03-15/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java学习-2020-03-15</div>
+    <a href="/2020/03/17/java-2020-3-17/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java学习-2020-03-17</div>
       <i class="icon-circle-right"></i>
     </a>
   
