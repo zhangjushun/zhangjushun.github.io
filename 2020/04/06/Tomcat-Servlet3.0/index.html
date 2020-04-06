@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zhangjushun.gitHub.io">
-  <title>数据结构-List-set-可变参数-Collections | zhangjushun</title>
+  <title>Tomcat-servlet3.0 | zhangjushun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.数据结构栈先入后出 队列先进先出 数组长度固定增删需要，创建新数组 链表查询慢，增删快单向链表双向链表，一条记录顺序 红黑树查询叶子最大次数，最小次数不能超过二倍 2.List继承collectionaddgetremoveset ArrayList底层数组，查快，增删慢 LinkedList底层是个链表结构：查询慢，增删快addFirstpushaddLast getFirstgetLast">
-<meta name="keywords" content="可变参数,List,set,Collections">
+  <meta name="description" content="web 软件架构  C/S：客户端/服务器端 B/S：浏览器/服务器端   资源分类  静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源.静态资源可以直接被浏览器解析 如： html,css,JavaScript   动态资源:每个用户访问相同资源后，得到的结果可能不一样。称为动态资源。动态资源被访问后，需要先转换为静态资源，在返回给浏览器 如：servlet/jsp,php,asp…">
+<meta name="keywords" content="javaWeb,Tomcat,servlet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构-List-set-可变参数-Collections">
-<meta property="og:url" content="https://zhangjushun.gitHub.io/2020/03/27/数据结构-List-set-可变参数-Collections/index.html">
+<meta property="og:title" content="Tomcat-servlet3.0">
+<meta property="og:url" content="https://zhangjushun.gitHub.io/2020/04/06/Tomcat-Servlet3.0/index.html">
 <meta property="og:site_name" content="zhangjushun">
-<meta property="og:description" content="1.数据结构栈先入后出 队列先进先出 数组长度固定增删需要，创建新数组 链表查询慢，增删快单向链表双向链表，一条记录顺序 红黑树查询叶子最大次数，最小次数不能超过二倍 2.List继承collectionaddgetremoveset ArrayList底层数组，查快，增删慢 LinkedList底层是个链表结构：查询慢，增删快addFirstpushaddLast getFirstgetLast">
+<meta property="og:description" content="web 软件架构  C/S：客户端/服务器端 B/S：浏览器/服务器端   资源分类  静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源.静态资源可以直接被浏览器解析 如： html,css,JavaScript   动态资源:每个用户访问相同资源后，得到的结果可能不一样。称为动态资源。动态资源被访问后，需要先转换为静态资源，在返回给浏览器 如：servlet/jsp,php,asp…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-28T15:15:52.998Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405232601214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzQ0OTc0,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200405233507916.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzQ0OTc0,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200406001204782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzQ0OTc0,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:updated_time" content="2020-04-06T03:19:29.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构-List-set-可变参数-Collections">
-<meta name="twitter:description" content="1.数据结构栈先入后出 队列先进先出 数组长度固定增删需要，创建新数组 链表查询慢，增删快单向链表双向链表，一条记录顺序 红黑树查询叶子最大次数，最小次数不能超过二倍 2.List继承collectionaddgetremoveset ArrayList底层数组，查快，增删慢 LinkedList底层是个链表结构：查询慢，增删快addFirstpushaddLast getFirstgetLast">
+<meta name="twitter:title" content="Tomcat-servlet3.0">
+<meta name="twitter:description" content="web 软件架构  C/S：客户端/服务器端 B/S：浏览器/服务器端   资源分类  静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源.静态资源可以直接被浏览器解析 如： html,css,JavaScript   动态资源:每个用户访问相同资源后，得到的结果可能不一样。称为动态资源。动态资源被访问后，需要先转换为静态资源，在返回给浏览器 如：servlet/jsp,php,asp…">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200405232601214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzQ0OTc0,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="zhangjushun" type="application/atom+xml">
   
@@ -159,46 +163,294 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据结构-List-set-可变参数-Collections" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Tomcat-Servlet3.0" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据结构-List-set-可变参数-Collections
+      Tomcat-servlet3.0
     </h1>
   
 
         
-        <a href="/2020/03/27/数据结构-List-set-可变参数-Collections/" class="archive-article-date">
-  	<time datetime="2020-03-27T02:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
+        <a href="/2020/04/06/Tomcat-Servlet3.0/" class="archive-article-date">
+  	<time datetime="2020-04-06T02:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-数据结构"><a href="#1-数据结构" class="headerlink" title="1.数据结构"></a>1.数据结构</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>先入后出</p>
-<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>先进先出</p>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>长度固定<br>增删需要，创建新数组</p>
-<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><p>查询慢，增删快<br>单向链表<br>双向链表，一条记录顺序</p>
-<h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><p>查询叶子最大次数，最小次数不能超过二倍</p>
-<h1 id="2-List"><a href="#2-List" class="headerlink" title="2.List"></a>2.List</h1><p>继承collection<br>add<br>get<br>remove<br>set</p>
-<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><p>底层数组，查快，增删慢</p>
-<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><p>底层是个链表结构：查询慢，增删快<br>addFirst<br>push<br>addLast</p>
-<p>getFirst<br>getLast</p>
-<p>isEmpty</p>
-<p>removeFirst=pop</p>
-<a id="more"></a>
-<h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><p>早期</p>
-<h1 id="3-set"><a href="#3-set" class="headerlink" title="3.set"></a>3.set</h1><p>接口 ，继承collection接口<br>不重复，没索引</p>
-<h3 id="hashSet"><a href="#hashSet" class="headerlink" title="hashSet"></a>hashSet</h3><p>实现了set接口，底层哈希表结构（查询快）<br>遍历可用迭代器或增强for<br><strong>哈希值</strong><br>hashCode  由系统随机给出（对象的地址，逻辑地址）<br>alt+insert 直接出</p>
-<h3 id="LinkHashSet"><a href="#LinkHashSet" class="headerlink" title="LinkHashSet"></a>LinkHashSet</h3><p>有序，不允许重复</p>
-<h1 id="4-可变参数"><a href="#4-可变参数" class="headerlink" title="4.可变参数"></a>4.可变参数</h1><p>0-多个<br>类型确定，参数个数不确定<br>一个方法只能有一个可变参数，可变参数在末尾<br>特殊写法 ：Object…obj</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02Var</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i=add(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span>...arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            sum+=i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>  sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><ol>
+<li><p>软件架构</p>
+<ol>
+<li>C/S：客户端/服务器端</li>
+<li>B/S：浏览器/服务器端</li>
+</ol>
+</li>
+<li><p>资源分类</p>
+<ol>
+<li>静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源.静态资源可以直接被浏览器解析<ul>
+<li>如： html,css,JavaScript</li>
+</ul>
+</li>
+<li>动态资源:每个用户访问相同资源后，得到的结果可能不一样。称为动态资源。动态资源被访问后，需要先转换为静态资源，在返回给浏览器<ul>
+<li>如：servlet/jsp,php,asp….</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>网络通信三要素</p>
+<ol>
+<li>IP：电子设备(计算机)在网络中的唯一标识。</li>
+<li>端口：应用程序在计算机中的唯一标识。 0~65536</li>
+<li>传输协议：规定了数据传输的规则<ol>
+<li>基础协议：<ol>
+<li>tcp:安全协议，三次握手。 速度稍慢</li>
+<li>udp：不安全协议。 速度快</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="web服务器软件"><a href="#web服务器软件" class="headerlink" title="web服务器软件"></a>web服务器软件</h2><ul>
+<li><p>服务器：安装了服务器软件的计算机</p>
+</li>
+<li><p>服务器软件：接收用户的请求，处理请求，做出响应</p>
+</li>
+<li><p>web服务器软件：接收用户的请求，处理请求，做出响应。</p>
+<ul>
+<li>在web服务器软件中，可以部署web项目，让用户通过浏览器来访问这些项目</li>
+<li>web容器</li>
+</ul>
+</li>
+<li><p>常见的java相关的web服务器软件：</p>
+<ul>
+<li>webLogic：oracle公司，大型的JavaEE服务器，支持所有的JavaEE规范，收费的。</li>
+<li>webSphere：IBM公司，大型的JavaEE服务器，支持所有的JavaEE规范，收费的。</li>
+<li>JBOSS：JBOSS公司的，大型的JavaEE服务器，支持所有的JavaEE规范，收费的。</li>
+<li>Tomcat：Apache基金组织，中小型的JavaEE服务器，仅仅支持少量的JavaEE规范servlet/jsp。开源的，免费的。</li>
+</ul>
+</li>
+<li><p>JavaEE：Java语言在企业级开发中使用的技术规范的总和，一共规定了13项大的规范</p>
+</li>
+<li><p>Tomcat：web服务器软件</p>
+<ol>
+<li><p>下载：<a href="http://tomcat.apache.org/" target="_blank" rel="noopener">http://tomcat.apache.org/</a></p>
+</li>
+<li><p>安装：解压压缩包即可。</p>
+<ul>
+<li>注意：安装目录建议不要有中文和空格</li>
+</ul>
+</li>
+<li><p>卸载：删除目录就行了</p>
+</li>
+<li><p>启动：</p>
+<ul>
+<li><p>bin/startup.bat ,双击运行该文件即可</p>
+</li>
+<li><p>访问：浏览器输入：<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> 回车访问自己</p>
+<pre><code>http://别人的ip:8080 访问别人</code></pre><a id="more"></a>        </li>
+<li><p>可能遇到的问题：</p>
+<ol>
+<li><p>黑窗口一闪而过：</p>
+<ul>
+<li>原因： 没有正确配置JAVA_HOME环境变量</li>
+<li>解决方案：正确配置<strong>JAVA_HOME</strong>环境变量</li>
+</ul>
+</li>
+<li><p>启动报错：</p>
+<ol>
+<li>暴力：找到占用的端口号，并且找到对应的进程，杀死该进程<ul>
+<li>netstat -ano   找PID，任务管理器对应</li>
+</ul>
+</li>
+<li>温柔：<strong>修改自身的端口号</strong><ul>
+<li>conf/server.xml</li>
+<li><code>&lt;Connector</code> port=”8888” protocol=”HTTP/1.1”<br> connectionTimeout=”20000”<br> redirectPort=”8445” /&gt;</li>
+<li>一般会将tomcat的默认端口号修改为80。80端口号是http协议的默认端口号。<ul>
+<li>好处：在访问时，就不用输入端口号</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>关闭：</p>
+<ol>
+<li>正常关闭：<ul>
+<li>bin/shutdown.bat</li>
+<li>ctrl+c</li>
+</ul>
+</li>
+<li>强制关闭：<ul>
+<li>点击启动窗口的×</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>配置:</p>
+<ul>
+<li><p>部署项目的方式：</p>
+<ol>
+<li><p>直接将项目放到webapps目录下即可。</p>
+<ul>
+<li>/hello：项目的访问路径–&gt;虚拟目录</li>
+<li>简化部署：将项目打成一个war包，再将war包放置到webapps目录下。<ul>
+<li><strong>war包会自动解压缩</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>配置conf/server.xml文件(不太安全)<br> 在<code>&lt;Host&gt;</code>标签体中配置<br> <code>&lt;Context</code> docBase=”D:\hello” path=”/hehe” /&gt;</p>
+<ul>
+<li>docBase:项目存放的路径</li>
+<li>path：虚拟目录</li>
+</ul>
+</li>
+<li><p>在conf\Catalina\localhost创建任意名称的xml文件。在文件中编写<br> <code>&lt;Context</code> docBase=”D:\hello” /&gt;</p>
+<ul>
+<li>虚拟目录：xml文件的名称</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>静态项目和动态项目：</p>
+<ul>
+<li>目录结构<ul>
+<li>java动态项目的目录结构：<br>  – 项目的根目录<pre><code>-- WEB-INF目录：
+    -- web.xml：web项目的核心配置文件
+    -- classes目录：放置字节码文件的目录
+    -- lib目录：放置依赖的jar包</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>将Tomcat集成到IDEA中，并且创建JavaEE的项目，部署项目。</p>
+</li>
+<li><p>IDEA　　run－＞edit Conf…–&gt;defaults–&gt;Tomcat Server,配置路径<img src="https://img-blog.csdnimg.cn/20200405232601214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzQ0OTc0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200405233507916.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzQ0OTc0,size_16,color_FFFFFF,t_70#pic_center" alt><br>如果报错配置jre<br><img src="https://img-blog.csdnimg.cn/20200406001204782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzQ0OTc0,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="Servlet：-server-applet"><a href="#Servlet：-server-applet" class="headerlink" title="Servlet：  server applet"></a>Servlet：  server applet</h2></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>概念：运行在服务器端的小程序</p>
+<ul>
+<li>Servlet就是一个接口，定义了Java类被浏览器访问到(tomcat识别)的规则。</li>
+<li>将来我们自定义一个类，实现Servlet接口，复写方法</li>
+</ul>
+</li>
+<li><p>快速入门：</p>
+<ol>
+<li>创建JavaEE项目</li>
+<li>定义一个类，实现Servlet接口<ul>
+<li>public class ServletDemo1 implements Servlet</li>
+</ul>
+</li>
+<li>实现接口中的抽象方法</li>
+<li>配置Servlet<br>  在web.xml中配置：</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--配置Servlet --&gt;</span><br><span class="line">&lt;servlet&gt;</span><br><span class="line">    &lt;servlet-name&gt;demo1&lt;/servlet-name&gt;</span><br><span class="line">    &lt;servlet-<span class="class"><span class="keyword">class</span>&gt;<span class="title">cn</span>.<span class="title">itcast</span>.<span class="title">web</span>.<span class="title">servlet</span>.<span class="title">ServletDemo1</span>&lt;/<span class="title">servlet</span>-<span class="title">class</span>&gt;</span></span><br><span class="line"><span class="class">&lt;/<span class="title">servlet</span>&gt;</span></span><br><span class="line"><span class="class">	</span></span><br><span class="line"><span class="class">&lt;<span class="title">servlet</span>-<span class="title">mapping</span>&gt;</span></span><br><span class="line"><span class="class">    &lt;<span class="title">servlet</span>-<span class="title">name</span>&gt;<span class="title">demo1</span>&lt;/<span class="title">servlet</span>-<span class="title">name</span>&gt;</span></span><br><span class="line"><span class="class">    &lt;<span class="title">url</span>-<span class="title">pattern</span>&gt;/<span class="title">demo1</span>&lt;/<span class="title">url</span>-<span class="title">pattern</span>&gt;</span></span><br><span class="line"><span class="class">&lt;/<span class="title">servlet</span>-<span class="title">mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="5-Collections集合工具类"><a href="#5-Collections集合工具类" class="headerlink" title="5.Collections集合工具类"></a>5.Collections集合工具类</h1><p><strong>addAll</strong>  插多个<br><strong>shuffle</strong> 打乱<br><strong>sort</strong><br>排序，只能LIst不能set，要实现compareable，重写compareTo（规则）<br>o-this降序<br>this-o升序<br>comparator<br>o1-o2升序</p>
+<ul>
+<li><p>执行原理：</p>
+<ol>
+<li>当服务器接受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径</li>
+<li>查找web.xml文件，是否有对应的<code>&lt;url-pattern&gt;</code>标签体内容。</li>
+<li>如果有，则在找到对应的<code>&lt;servlet-class&gt;</code>全类名</li>
+<li>tomcat会将字节码文件加载进内存，并且创建其对象</li>
+<li>调用其方法</li>
+</ol>
+</li>
+<li><p>Servlet中的生命周期方法：</p>
+<ol>
+<li><p>被创建：执行<strong>init方法，只执行一次</strong></p>
+<ul>
+<li>Servlet什么时候被创建？<ul>
+<li>默认情况下，第一次被访问时，Servlet被创建</li>
+<li>可以配置执行Servlet的创建时机。<ul>
+<li>xml在<code>&lt;servlet&gt;</code>标签下配置<ol>
+<li>第一次被访问时，创建<ul>
+<li><code>&lt;load-on-startup&gt;</code>的值为负数,默认-1</li>
+</ul>
+</li>
+<li>在服务器启动时，创建<ul>
+<li><code>&lt;load-on-startup&gt;</code>的值为0或正整数</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Servlet的init方法，只执行一次，说明一个Servlet在内存中只存在一个对象，Servlet是单例的<ul>
+<li>多个用户同时访问时，可能存在线程安全问题。</li>
+<li>解决：尽量<strong>不要</strong>在Servlet中<strong>定义成员变量</strong>。即使定义了成员变量，也不要对修改值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>提供服务：<strong>执行service方法，执行多次</strong></p>
+<ul>
+<li>每次访问Servlet时，Service方法都会被调用一次。</li>
+</ul>
+</li>
+<li><p>被销毁：<strong>执行destroy方法，只执行一次</strong></p>
+<ul>
+<li>Servlet被销毁时执行。服务器关闭时，Servlet被销毁</li>
+<li>只有服务器<strong>正常关闭</strong>时，才会执行destroy方法。</li>
+<li>destroy方法在Servlet被销毁之前执行，一般用于释放资源</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Servlet3.0：</p>
+<ul>
+<li><p>好处：</p>
+<ul>
+<li>支持注解配置。可以不需要web.xml了。</li>
+</ul>
+</li>
+<li><p>步骤：</p>
+<ol>
+<li>创建JavaEE项目，选择Servlet的版本3.0以上，可以不创建web.xml</li>
+<li>定义一个类，实现Servlet接口</li>
+<li>复写方法</li>
+<li>在类上使用@<strong>WebServlet注解</strong>，进行配置<ul>
+<li>@WebServlet(“资源路径”)<h2 id="IDEA与tomcat的相关配置"><a href="#IDEA与tomcat的相关配置" class="headerlink" title="IDEA与tomcat的相关配置"></a>IDEA与tomcat的相关配置</h2></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>IDEA会为每一个tomcat部署的项目单独建立一份配置文件</p>
+<ul>
+<li>查看控制台的log：Using CATALINA_BASE:   “C:\Users\17461.IntelliJIdea2017.3\system\tomcat_itcasts”</li>
+</ul>
+</li>
+<li><p>工作空间项目    和     tomcat部署的web项目</p>
+<ul>
+<li>tomcat真正访问的是“tomcat部署的web项目”，”tomcat部署的web项目”对应着”工作空间项目” 的web目录下的所有资源</li>
+<li>WEB-INF目录下的资源不能被浏览器直接访问。</li>
+</ul>
+</li>
+<li><p>断点调试：使用”小虫子”启动 dubug 启动</p>
+</li>
+</ol>
 
       
 
@@ -243,19 +495,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">可变参数</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaWeb</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">List</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">set</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Collections</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">servlet</a>
         		</li>
       		
 		</ul>
@@ -322,7 +570,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://zhangjushun.gitHub.io/2020/03/27/数据结构-List-set-可变参数-Collections/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zhangjushun.gitHub.io/2020/04/06/Tomcat-Servlet3.0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -336,18 +584,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/27/Map-debug/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Map-debug
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/26/斗地主java/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">斗地主java</div>
+    <a href="/2020/04/05/Xml-Schema-Jsoup（爬虫）-Xpath/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Xml-Schema-Jsoup（爬虫）-Xpath</div>
       <i class="icon-circle-right"></i>
     </a>
   
