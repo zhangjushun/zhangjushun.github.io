@@ -159,6 +159,205 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-idea常用的快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/idea常用的快捷键/">IDEA快捷键</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/idea常用的快捷键/" class="archive-article-date">
+  	<time datetime="2020-05-03T14:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>archetypeCatalog<br>internal</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">快捷键</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/SSM//" class="article-tag-list-link color4">SSM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/idea常用的快捷键/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SSM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/SSM/">SSM</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/SSM/" class="archive-article-date">
+  	<time datetime="2020-05-03T12:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-搭建整合环境"><a href="#1-搭建整合环境" class="headerlink" title="1. 搭建整合环境"></a>1. 搭建整合环境</h2><ol>
+<li><p>整合说明：SSM整合可以使用多种方式，咱们会选择XML + 注解的方式</p>
+</li>
+<li><p>整合的思路</p>
+<ol>
+<li>先搭建整合的环境</li>
+<li>先把Spring的配置搭建完成</li>
+<li>再使用Spring整合SpringMVC框架</li>
+<li>最后使用Spring整合MyBatis框架</li>
+</ol>
+</li>
+<li><p>创建数据库和表结构</p>
+<ol>
+<li>语句<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create database ssm;</span><br><span class="line">use ssm;</span><br><span class="line"><span class="function">create table <span class="title">account</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">id <span class="keyword">int</span> primary key auto_increment,</span></span></span><br><span class="line"><span class="function"><span class="params">name varchar(<span class="number">20</span>)</span>,</span></span><br><span class="line"><span class="function">money <span class="keyword">double</span></span></span><br><span class="line"><span class="function">)</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>创建maven的工程（今天会使用到工程的聚合和拆分的概念，这个技术maven高级会讲）</p>
+<ol>
+<li>创建ssm_parent父工程（打包方式选择pom，必须的）</li>
+<li>创建ssm_web子模块（打包方式是war包）</li>
+<li>创建ssm_service子模块（打包方式是jar包）</li>
+<li>创建ssm_dao子模块（打包方式是jar包）</li>
+<li>创建ssm_domain子模块（打包方式是jar包）</li>
+<li>web依赖于service，service依赖于dao，dao依赖于domain</li>
+<li>在ssm_parent的pom.xml文件中引入坐标依赖<h2 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml"></a>pom.xml</h2>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SSM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/SSM//" class="article-tag-list-link color4">SSM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/SSM/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-SpringMVC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -943,227 +1142,6 @@
 
 
   
-    <article id="post-JQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/12/JQuery/">JQuery</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/12/JQuery/" class="archive-article-date">
-  	<time datetime="2020-04-12T14:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h2><ol>
-<li><p>概念： 一个JavaScript框架。简化JS开发。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优    化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
-<ul>
-<li>JavaScript框架：本质上就是一些js文件，封装了js的原生代码而已</li>
-</ul>
-</li>
-<li><p>快速入门</p>
-<ol>
-<li>步骤：<ol>
-<li>下载JQuery<ul>
-<li>目前jQuery有三个大版本：<br>  1.x：兼容ie678,使用最为广泛的，官方只做BUG维护，<pre><code>功能不再新增。因此一般项目来说，使用1.x版本就可以了，
-最终版本：1.12.4 (2016年5月20日)</code></pre>  2.x：不兼容ie678，很少有人使用，官方只做BUG维护，<pre><code>功能不再新增。如果不考虑兼容低版本的浏览器可以使用2.x，
-最终版本：2.2.4 (2016年5月20日)</code></pre>  3.x：不兼容ie678，只支持最新的浏览器。除非特殊要求，<pre><code>一般不会使用3.x版本的，很多老的jQuery插件不支持这个版本。
-目前该版本是官方主要更新维护的版本。最新版本：3.2.1（2017年3月20日）</code></pre></li>
-<li>jquery-xxx.js 与 jquery-xxx.min.js区别：<ol>
-<li>jquery-xxx.js：开发版本。给程序员看的，有良好的缩进和注释。体积大一些</li>
-<li>jquery-xxx.min.js：生产版本。程序中使用，没有缩进。体积小一些。程序加载更快
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/12/JQuery/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Filter-代理-Listener" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/11/Filter-代理-Listener/">Filter-代理-listener</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/11/Filter-代理-Listener/" class="archive-article-date">
-  	<time datetime="2020-04-11T14:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><ol>
-<li>web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。<ul>
-<li>过滤器的作用：<ul>
-<li>一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤…</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>快速入门：<ol>
-<li>步骤：<ol>
-<li>定义一个类，实现接口Filter</li>
-<li>复写方法</li>
-<li>配置拦截路径<ol>
-<li>web.xml</li>
-<li>注解</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>代码：<br> @WebFilter(“/*”)//访问所有资源之前，都会执行该过滤器
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Filter</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">代理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">listener</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/11/Filter-代理-Listener/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1604,6 +1582,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SSM</a>
               </li>
             
             <div class="clearfix"></div>

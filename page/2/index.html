@@ -159,6 +159,227 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/12/JQuery/">JQuery</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/12/JQuery/" class="archive-article-date">
+  	<time datetime="2020-04-12T14:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h2><ol>
+<li><p>概念： 一个JavaScript框架。简化JS开发。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优    化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+<ul>
+<li>JavaScript框架：本质上就是一些js文件，封装了js的原生代码而已</li>
+</ul>
+</li>
+<li><p>快速入门</p>
+<ol>
+<li>步骤：<ol>
+<li>下载JQuery<ul>
+<li>目前jQuery有三个大版本：<br>  1.x：兼容ie678,使用最为广泛的，官方只做BUG维护，<pre><code>功能不再新增。因此一般项目来说，使用1.x版本就可以了，
+最终版本：1.12.4 (2016年5月20日)</code></pre>  2.x：不兼容ie678，很少有人使用，官方只做BUG维护，<pre><code>功能不再新增。如果不考虑兼容低版本的浏览器可以使用2.x，
+最终版本：2.2.4 (2016年5月20日)</code></pre>  3.x：不兼容ie678，只支持最新的浏览器。除非特殊要求，<pre><code>一般不会使用3.x版本的，很多老的jQuery插件不支持这个版本。
+目前该版本是官方主要更新维护的版本。最新版本：3.2.1（2017年3月20日）</code></pre></li>
+<li>jquery-xxx.js 与 jquery-xxx.min.js区别：<ol>
+<li>jquery-xxx.js：开发版本。给程序员看的，有良好的缩进和注释。体积大一些</li>
+<li>jquery-xxx.min.js：生产版本。程序中使用，没有缩进。体积小一些。程序加载更快
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/12/JQuery/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Filter-代理-Listener" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/11/Filter-代理-Listener/">Filter-代理-listener</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/11/Filter-代理-Listener/" class="archive-article-date">
+  	<time datetime="2020-04-11T14:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><ol>
+<li>web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。<ul>
+<li>过滤器的作用：<ul>
+<li>一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤…</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>快速入门：<ol>
+<li>步骤：<ol>
+<li>定义一个类，实现接口Filter</li>
+<li>复写方法</li>
+<li>配置拦截路径<ol>
+<li>web.xml</li>
+<li>注解</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>代码：<br> @WebFilter(“/*”)//访问所有资源之前，都会执行该过滤器
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Filter</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">代理</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">listener</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/11/Filter-代理-Listener/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-综合案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1197,234 +1418,6 @@
 
 
   
-    <article id="post-BOM-DOM-事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/04/BOM-DOM-事件/">BOM-DOM-事件</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/04/BOM-DOM-事件/" class="archive-article-date">
-  	<time datetime="2020-04-04T14:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="DOM简单学习"><a href="#DOM简单学习" class="headerlink" title="DOM简单学习"></a>DOM简单学习</h2><ul>
-<li><p>功能：控制html文档的内容</p>
-</li>
-<li><p>获取页面标签(元素)对象：Element</p>
-<ul>
-<li><strong>document.getElementById(“id值”)</strong>:通过元素的id获取元素对象</li>
-</ul>
-</li>
-<li><p>操作Element对象：</p>
-<ol>
-<li>修改属性值：<ol>
-<li>明确获取的对象是哪一个？</li>
-<li>查看API文档，找其中有哪些属性可以设置</li>
-</ol>
-</li>
-<li>修改标签体内容：<ul>
-<li>属性：innerHTML</li>
-</ul>
-<ol>
-<li>获取元素对象</li>
-<li>使用innerHTML属性修改标签体内容<h2 id="事件简单学习"><a href="#事件简单学习" class="headerlink" title="事件简单学习"></a>事件简单学习</h2></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>如何绑定事件</p>
-<ol>
-<li><p>直接在html标签上，指定事件的属性(操作)，属性值就是js代码</p>
-<ol>
-<li>事件：onclick— 单击事件</li>
-</ol>
-</li>
-<li><p>通过js获取元素对象，指定事件属性，设置一个函数</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BOM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">事件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/04/BOM-DOM-事件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript之ECMAScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/03/JavaScript之ECMAScript/">JavaScript</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/03/JavaScript之ECMAScript/" class="archive-article-date">
-  	<time datetime="2020-04-03T12:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
-<li><p>概念：    一门客户端脚本语言</p>
-<ul>
-<li>运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎</li>
-<li>脚本语言：不需要编译，直接就可以被浏览器解析执行了</li>
-</ul>
-</li>
-<li><p>功能：</p>
-<ul>
-<li>可以来增强用户和html页面的交互过程，可以来控制html元素，让页面有一些动态的效果，增强用户的体验。</li>
-<li>JavaScript = <strong>ECMAScript</strong> + JavaScript自己特有的东西(<strong>BOM+DOM</strong>)
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/03/JavaScript之ECMAScript/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1865,6 +1858,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SSM</a>
               </li>
             
             <div class="clearfix"></div>
