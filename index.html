@@ -159,6 +159,190 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Oracle02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/24/Oracle02/">Oracle02</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/24/Oracle02/" class="archive-article-date">
+  	<time datetime="2020-05-24T12:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>—<strong>视图</strong><br>—视图的概念：视图就是提供一个查询的窗口，所有数据来自于原表。</p>
+<p>—查询语句创建表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> emp <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> scott.emp;</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+
+<p>—创建视图【必须有dba权限】</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> v_emp <span class="keyword">as</span> <span class="keyword">select</span> ename, job <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+
+<p>—查询视图</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v_emp;</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Oracle02</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/SSM//" class="article-tag-list-link color4">SSM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/24/Oracle02/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Oracle01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/20/Oracle01/">Oracle01</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/20/Oracle01/" class="archive-article-date">
+  	<time datetime="2020-05-20T12:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>–<strong>创建</strong>表空间</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">tablespace</span> itheima</span><br><span class="line"><span class="keyword">datafile</span> <span class="string">'c:\itheima.dbf'</span></span><br><span class="line"><span class="keyword">size</span> <span class="number">100</span>m</span><br><span class="line"><span class="keyword">autoextend</span> <span class="keyword">on</span></span><br><span class="line"><span class="keyword">next</span> <span class="number">10</span>m;</span><br></pre></td></tr></table></figure>
+
+<p>–<strong>删除</strong>表空间</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">tablespace</span> itheima;</span><br></pre></td></tr></table></figure>
+
+<p>–<strong>创建用户</strong><br>itcast 为表空间名称<br>datafile 指定表空间对应的数据文件<br>size 后定义的是表空间的初始大小<br>autoextend on 自动增长 ，当表空间存储都占满时，自动增长<br>next 后指定的是一次自动增长的大小。</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Oracle01</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/SSM//" class="article-tag-list-link color4">SSM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/20/Oracle01/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-idea常用的快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -928,220 +1112,6 @@
 
 
   
-    <article id="post-redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/14/redis/">redis</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/14/redis/" class="archive-article-date">
-  	<time datetime="2020-04-14T14:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Redis（用于缓存）"><a href="#Redis（用于缓存）" class="headerlink" title="Redis（用于缓存）"></a>Redis（用于缓存）</h2><ol>
-<li><p>概念： redis是一款高性能的<strong>NOSQL</strong>系列的<strong>非关系型</strong>数据库</p>
-<ul>
-<li>关系数据库：有关联；数据存在硬盘里</li>
-<li>非关系：没关联；储存在内存</li>
-<li>一般会将数据存储在关系型数据库中，在nosql数据库中备份存储关系型数据库的数据</li>
-</ul>
-</li>
-<li><p>NOSQL和关系型数据库比较</p>
-<pre><code>    优点：
-        1）成本：nosql数据库简单易部署，基本都是开源软件，不需要像使用oracle那样花费大量成本购买使用，相比关系型数据库价格便宜。
-        2）查询速度：nosql数据库将数据存储于缓存之中，关系型数据库将数据存储在硬盘中，自然查询速度远不及nosql数据库。
-        3）存储数据的格式：nosql的存储格式是key,value形式、文档形式、图片形式等等，所以可以存储基础类型以及对象或者是集合等各种格式，而数据库则只支持基础类型。
-        4）扩展性：关系型数据库有类似join这样的多表查询机制的限制导致扩展很艰难。
-缺点：
-    1）维护的工具和资料有限，因为nosql是属于新的技术，不能和关系型数据库10几年的技术同日而语。
-    2）不提供对sql的支持，如果不支持sql这样的工业标准，将产生一定用户的学习和使用成本。
-    3）不提供关系型数据库对事务的处理。</code></pre></li>
-<li><p>1 Redis是用C语言开发的一个开源的高性能键值对（key-value）数据库，官方提供测试数据，50个并发执行100000个请求,读的速度是110000次/s,写的速度是81000次/s ，且Redis通过提供多种键值数据类型来适应不同场景下的存储需求，目前为止Redis支持的键值数据类型如下：</p>
-<pre><code>1) 字符串类型 string
-2) 哈希类型 hash
-3) 列表类型 list
-4) 集合类型 set
-5) 有序集合类型 sortedset</code></pre>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/14/redis/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AJAX-JSON" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/13/AJAX-JSON/">AJAX-json</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/13/AJAX-JSON/" class="archive-article-date">
-  	<time datetime="2020-04-13T14:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><ol>
-<li><p>概念： ASynchronous JavaScript And XML    异步的JavaScript 和 XML</p>
-<ol>
-<li><p>异步和同步：客户端和服务器端相互通信的基础上</p>
-<ul>
-<li><p>客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。</p>
-</li>
-<li><p>客户端不需要等待服务器端的响应。在服务器处理请求的过程中，客户端可以进行其他的操作。</p>
-<p>Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 [1]<br>通过在后台与服务器进行少量数据交换，Ajax 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某** **。<br>传统的网页（不使用 Ajax）如果需要更新内容，必须重载整个网页页面。</p>
-<p>提升用户的体验</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">json</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/13/AJAX-JSON/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1594,6 +1564,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">SSM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Oracle01</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Oracle02</a>
               </li>
             
             <div class="clearfix"></div>

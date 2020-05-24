@@ -159,6 +159,192 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java -2020-03-24" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/24/java -2020-03-24/">java学习-2020-03-24</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/24/java -2020-03-24/" class="archive-article-date">
+  	<time datetime="2020-03-24T10:38:30.821Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>激活IDEA</strong> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Help” -&gt; “Edit Custom VM Options…”</span><br></pre></td></tr></table></figure>
+
+<p>输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-javaagent:C:\Users\nrgh\jetbrains-agent.jar</span><br></pre></td></tr></table></figure>
+
+<p>重启软件</p>
+<p>Help” -&gt; “Register…”</p>
+<p>选择License server方式，地址填入：<a href="http://fls.jetbrains-agent.com" target="_blank" rel="noopener">http://fls.jetbrains-agent.com</a> </p>
+<p>再重启软件即可</p>
+<h2 id="1-继承"><a href="#1-继承" class="headerlink" title="1.继承"></a>1.继承</h2><p>共性抽取</p>
+<p>员工 ：父类（基类，超类）</p>
+<p>讲师，助教：子类（派生类）</p>
+<p>特点：1）子类可以有父类的内容</p>
+<pre><code>2）子类可以有自己的内容</code></pre><p>子类；public class Teacher extends Employee；</p>
+<p>父类成员变量：  super.成员变量名</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/24/java -2020-03-24/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-发红包java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/22/发红包java/">发红包java</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/22/发红包java/" class="archive-article-date">
+  	<time datetime="2020-03-22T04:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>用户类</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int money;</span><br><span class="line"></span><br><span class="line">    public User(String name, int money) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.money = money;</span><br><span class="line">    &#125;</span><br><span class="line">public  void  <span class="function"><span class="title">show</span></span>()&#123;</span><br><span class="line">    System.out.println(<span class="string">"我叫"</span>+name+<span class="string">"我有"</span>+money);</span><br><span class="line">&#125;</span><br><span class="line">    public <span class="function"><span class="title">User</span></span>() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int <span class="function"><span class="title">getMoney</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> money;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setMoney(int money) &#123;</span><br><span class="line">        this.money = money;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">继承</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/22/发红包java/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-接口多态实例（电脑USb实例）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -870,179 +1056,6 @@
 
 
   
-    <article id="post-简历总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/28/简历总结/">简历总结</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/28/简历总结/" class="archive-article-date">
-  	<time datetime="2020-02-28T04:29:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-组网"><a href="#1-组网" class="headerlink" title="1.组网"></a>1.组网</h3><h4 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h4><p>SW0(config)#interface range f0/1-2</p>
-<p>SW0(config-if-range)switchport mode access</p>
-<p>SW0(config-if-range)switchport access vlan 10</p>
-<p>SW1(config-if)#switchport mode trunk</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/28/简历总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-张氏饭谱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/19/张氏饭谱/">张氏菜谱</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/19/张氏饭谱/" class="archive-article-date">
-  	<time datetime="2020-02-19T06:10:41.777Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="张氏饭谱"><a href="#张氏饭谱" class="headerlink" title="张氏饭谱"></a>张氏饭谱</h1><h3 id="1-玉米粥（两碗）"><a href="#1-玉米粥（两碗）" class="headerlink" title="1.    玉米粥（两碗）"></a>1.    玉米粥（两碗）</h3><p>水：三碗水，烧热80度刚冒泡，干的取出来<br>玉米面 半杯 细的多点 加1/8勺碱<br>搅拌进水<br>一直大火，一直搅，到粘稠<br>放干的，小火，3分钟，再等5分钟，吃饭饭</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">发文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/19/张氏饭谱/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
@@ -1495,6 +1508,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">SSM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Oracle01</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Oracle02</a>
               </li>
             
             <div class="clearfix"></div>
